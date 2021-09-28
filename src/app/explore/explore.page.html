@@ -1,0 +1,176 @@
+<ion-header>
+  <ion-toolbar class="ion-padding" color="danger">
+    <ion-searchbar class="ion-padding" routerLink="/find" placeholder="Para onde você vai?">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <div class="card-lg">
+      <ion-row>
+        <ion-col size="auto">
+          <ion-img
+            src="https://images.pexels.com/photos/3051551/pexels-photo-3051551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+          </ion-img>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-padding">
+          <h1 class="card-lg">Anfitriões<br> fazem acontecer.</h1>
+        </ion-col>
+      </ion-row>
+    </div>
+    <h1 class="ion-margin">&nbsp;Sugestões&nbsp;</h1>
+    <ion-slides>
+      <ion-slide>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img
+                  src="assets/img/032-beach.png">
+              </ion-avatar>
+              <ion-label>São Sebastião</ion-label>
+            </ion-item>
+
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img
+                  src="assets/img/040-town.png">
+              </ion-avatar>
+              <ion-label>Guarujá</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+
+            <ion-item>
+              <ion-avatar slot="start">
+                <img
+                  src="assets/img/023-cabin.png">
+              </ion-avatar>
+              <ion-label>Campos do Jordão</ion-label>
+            </ion-item>
+
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img
+                  src="assets/img/006-mountain.png">
+              </ion-avatar>
+              <ion-label>Paraty</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-slide>
+      <ion-slide>
+        <ion-row>
+          <ion-col>
+
+            <ion-item>
+              <ion-avatar slot="start">
+                <img
+                  src="assets/img/025-road.png">
+              </ion-avatar>
+              <ion-label>São Roque</ion-label>
+            </ion-item>
+
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img
+                  src="assets/img/011-waterfall.png">
+              </ion-avatar>
+              <ion-label>Socorro</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+
+            <ion-item>
+              <ion-avatar slot="start">
+                <img
+                  src="assets/img/beach.png">
+              </ion-avatar>
+              <ion-label>Santos</ion-label>
+            </ion-item>
+
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-avatar slot="start">
+                <img
+                  src="assets/img/cityscape.png">
+              </ion-avatar>
+              <ion-label>Campinas</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-slide>
+    </ion-slides>
+
+    <h1>&nbsp;Lugares mais procurados&nbsp;</h1>
+
+    <ion-slides>
+      <ion-slide>
+        <ion-card class="ion-padding" [routerLink]="['/detalhes', nomeCasa.id]">
+          <ion-img
+            src={{nomeCasa.foto}}>
+          </ion-img>
+          <hr>
+          <ion-card-title>{{nomeCasa.name}}</ion-card-title>
+          <ion-card-subtitle>
+            <ion-icon name="map-outline" color="danger"></ion-icon>{{nomeCasa.locais}} &nbsp;<ion-icon name="star"
+              color="danger"></ion-icon>{{nomeCasa.nota}} &nbsp; <ion-icon name="diamond-outline" color="danger"></ion-icon>
+            Superhost
+          </ion-card-subtitle>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card class="ion-padding" [routerLink]="['/detalhes', nomeCasa2.id]">
+          <ion-img
+            src={{nomeCasa2.foto}}>
+          </ion-img>
+          <hr>
+          <ion-card-title>{{nomeCasa2.name}}</ion-card-title>
+          <ion-card-subtitle>
+            <ion-icon name="map-outline" color="primary"></ion-icon>{{nomeCasa2.locais}} &nbsp; <ion-icon name="star"
+              color="primary"></ion-icon>{{nomeCasa2.nota}} &nbsp; <ion-icon name="diamond-outline" color="danger"></ion-icon>
+            Superhost
+          </ion-card-subtitle>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card class="ion-padding" [routerLink]="['/detalhes', nomeCasa3.id]">
+          <ion-img
+            src= {{nomeCasa3.foto}} >
+          </ion-img>
+          <hr>
+          <ion-card-title>{{nomeCasa3.name}}</ion-card-title>
+          <ion-card-subtitle>
+            <ion-icon name="map-outline" color="danger"></ion-icon>{{nomeCasa3.locais}} &nbsp; <ion-icon name="star" color="primary">
+            </ion-icon>{{nomeCasa3.nota}} &nbsp; <ion-icon name="diamond-outline" color="danger"></ion-icon>Superhost
+          </ion-card-subtitle>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+
+</ion-content>
+
+<ion-footer>
+  <ion-segment>
+    <ion-segment-button routerLink="/historico">
+      <ion-icon name="list-circle-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button (click) = "logoutExplore()" routerLink="/login">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+</ion-footer>
+<script src="lodash.js"></script>

@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Escolher Forma de Pagamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item (click)="formBoleto()">
+      <ion-label>
+        <ion-icon name="document-outline"></ion-icon>
+        <ion-text> Boleto Bancário</ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid *ngIf="boleto">
+    <ion-card class="editCard ion-padding">
+      <ion-row>
+        <ion-icon name="alert-outline"></ion-icon>
+        <ion-input class="ion-padding" [(ngModel)] = "name" placeholder="Nome Completo"></ion-input>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-icon name="alert-outline"></ion-icon>
+        <ion-input class="ion-padding" [(ngModel)] = "cpf" placeholder="CPF"></ion-input>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-icon name="alert-outline"></ion-icon>
+        <ion-input class="ion-padding" [(ngModel)] = "email" placeholder="E-mail"></ion-input>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-icon name="alert-outline"></ion-icon>
+        <ion-input maxlength="8" class="ion-padding" [(ngModel)] = "cep" placeholder="Cep" (ionBlur)="buscarCep()"></ion-input>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-icon name="alert-outline"></ion-icon>
+        <ion-input class="ion-padding" [(ngModel)] = "rua" placeholder="Rua"></ion-input>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-icon name="alert-outline"></ion-icon>
+        <ion-input class="ion-padding" [(ngModel)] = "bairro" placeholder="Bairro"></ion-input>
+      </ion-row>
+      <hr>
+      <ion-row>
+        <ion-icon name="alert-outline"></ion-icon>
+        <ion-input class="ion-padding" [(ngModel)] = "uf" placeholder="UF"></ion-input>
+      </ion-row>
+      <hr>
+      <ion-row class="ion-text-center">
+        <ion-text color="medium"><strong>Seu boleto será gerado após a confirmação da reserva!</strong></ion-text>
+      </ion-row>
+    </ion-card>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <ion-row class="ion-align-items-center">
+    <ion-col >
+      <ion-button class="ion-margin" color="danger" fill="clear" style="text-decoration: underline" (click) = "cancelPay()">Cancelar</ion-button>
+    </ion-col>
+    <ion-col size="auto">
+      <ion-button class="ion-margin" color="danger" (click) = "savePay()">Salvar</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

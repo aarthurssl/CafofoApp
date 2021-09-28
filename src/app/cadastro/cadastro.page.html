@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-row class="ion-align-items-center">
+    <ion-col>
+      <div class="ion-float-start ion-padding">
+        <span>
+          <ion-back-button color="danger" class="save-button" defaultHref="/login">
+          </ion-back-button>
+        </span>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <span class="ion-float-end ion-padding">
+          <ion-text color="danger" class="save-button" (click) = "cadastrar()">Salvar</ion-text>
+        </span>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-header>
+<ion-content>
+  <div>
+    <ion-row>
+      <ion-col>
+        <ion-header>
+          <div class="header">
+            <h1>Cadastrar Informações Pessoais</h1>
+          </div>
+        </ion-header>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div>
+    <ion-row>
+      <ion-col class="form-format">
+        <form action="">
+          <label for="">Nome</label><br>
+          <input id="nome" class="botao-entrar" type="text"><br><br>
+
+          <label for="">Sobrenome</label><br>
+          <input id="sobrenome" class="botao-entrar" type="text"><br><br>
+
+          <label for="">Senha</label><br>
+          <input id="senha" class="botao-entrar" type="password"><br><br>
+
+          <label for="">Gênero</label><br>
+          <input id="gen" class="botao-entrar" type="text"><br><br>
+
+          <label for="">E-mail</label><br>
+          <input id="email" type="email"  class="input-text botao-entrar"><br><br>
+
+          <label for="">Número de Telefone</label><br>
+          <input id="tel" class="botao-entrar" type="tel"><br><br>
+
+        </form>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

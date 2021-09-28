@@ -1,0 +1,37 @@
+ion-header{
+    background-color: black;
+}
+ion-toolbar{
+    padding: 0;
+}
+div.card-lg{
+    padding: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color:white;
+}
+
+h1.card-lg{
+    color:black;
+    font-weight: 600;
+}
+searchbar.icon{
+    color:#f74053;
+}
+.cd19-news{
+text-align: center;
+}
+
+ion-searchbar {
+    margin-top: 15px;
+    --border-radius: 2px;
+    --box-shadow: 2px;
+    --cancel-button-color: #f74053;
+    --clear-button-color: #f74053;
+    --color: #f74053;
+    --icon-color: #f74053;
+}
+
+ion-footer {
+    background-color:#f74053 ;
+}

@@ -1,0 +1,32 @@
+.image-card {
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+ }
+
+ ion-content{
+    --ion-background-color: #white;
+  }
+
+  ion-card{
+    --ion-background-color: white;
+  }
+
+  .blackText{
+    color: black;
+  }
+
+  ion-icon{
+    color: black;
+  }
+
+  .save-button {
+    font-size: 1.5em;
+    text-decoration: none;
+  }
+
+  ion-header {
+    background-color: #ff4961;
+    color: white !important;
+  }
